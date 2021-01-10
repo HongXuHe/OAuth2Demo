@@ -11,8 +11,9 @@ namespace AuthServer.NET.Models.Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; }=Guid.NewGuid();
 
+        public bool Active { get; set; } = true;
         public DateTime TimeStamp { get; set; } = DateTime.UtcNow;
     }
 }
